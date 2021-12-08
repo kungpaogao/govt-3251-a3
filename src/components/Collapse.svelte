@@ -14,22 +14,18 @@
 </script>
 
 <button
-  class="w-full text-left rounded-lg border border-gray-300 p-3 my-1
-  shadow-md hover:bg-gray-100 transition-colors"
+  class="w-full text-left rounded-lg border border-gray-300 p-3 my-2
+  shadow-md hover:bg-gray-100 transition-colors flex items-center"
   on:click={() => {
     isCollapsed = !isCollapsed;
   }}
 >
   <img src={icon} alt={title} class="inline-flex h-10" />
-  <h3 class="ml-3 inline-flex">{title}</h3>
+  <h3 class="ml-3 inline-flex flex-1">{title}</h3>
   {#if isCollapsed}
-    <span class="h-10 p-2 inline-flex float-right">
-      <ChevronUpIcon />
-    </span>
+    <ChevronUpIcon class="w-5 h-5" />
   {:else}
-    <span class="h-10 p-2 inline-flex float-right">
-      <ChevronDownIcon />
-    </span>
+    <ChevronDownIcon class="w-5 h-5" />
   {/if}
 </button>
 
@@ -37,8 +33,8 @@
   <div class="p-5">
     {desc}
     <a href={link}>
-      Learn more<span class="ml-1 content-center h-4 inline-flex"
-        ><ExternalLinkIcon /></span
+      Learn more<span class="ml-1 content-center inline-flex"
+        ><ExternalLinkIcon class="h-4 w-4" /></span
       >
     </a>
   </div>

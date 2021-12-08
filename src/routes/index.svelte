@@ -64,15 +64,20 @@
 </div>
 
 <nav
-  class="p-7 mt-5 top-0 bg-white border-gray-300"
   class:sticky={isScrolledPastHeader}
   class:border-b={isScrolledPastHeader}
   class:shadow={isScrolledPastHeader}
   class:p-5={isScrolledPastHeader}
+  class="lg:sticky lg:shadow-none lg:border-none lg:float-left p-7 mt-5 top-0
+  bg-white lg:bg-transparent border-gray-300"
 >
-  <h2 class="text-2xl mb-3" class:hidden={isScrolledPastHeader}>Contents</h2>
-  <ul class:flex={isScrolledPastHeader}>
-    <li class="mr-5"><a href="#heading1">the problem</a></li>
+  <h2 class:hidden={isScrolledPastHeader} class="text-2xl mb-3 lg:block">
+    Contents
+  </h2>
+  <ul class:flex={isScrolledPastHeader} class="lg:block">
+    <li class="mr-5">
+      <a href="#heading1">the problem</a>
+    </li>
     <li class="mr-5"><a href="#heading2">the cause</a></li>
     <li class="mr-5"><a href="#heading3">the future</a></li>
   </ul>
@@ -83,19 +88,21 @@
   {@html intro}
 </section>
 
-<section class="bg-gray-200 p-7">
-  <h2 class="text-2xl">Social determinants of health</h2>
-  <p>
-    The U.S. Department of Health and Human Services defines the social
-    determinants of health as "the conditions in the environments where people
-    are born, live, learn, work, play, worship, and age that affect a wide range
-    of health, functioning, and quality-of-life outcomes and risks." They are
-    grouped into five domains—click to learn the goal of each SDOH.
-  </p>
-  <div class="bg-white rounded-xl p-3 mt-7">
-    {#each sdohData as { icon, title, goal, link }, i}
-      <Collapse {icon} {title} desc={goal} {link} />
-    {/each}
+<section class="bg-gray-200">
+  <div class="lg:w-1/2 mx-auto p-7">
+    <h2 class="text-2xl">Social determinants of health</h2>
+    <p>
+      The U.S. Department of Health and Human Services defines the social
+      determinants of health as "the conditions in the environments where people
+      are born, live, learn, work, play, worship, and age that affect a wide
+      range of health, functioning, and quality-of-life outcomes and risks."
+      They are grouped into five domains—click to learn the goal of each SDOH.
+    </p>
+    <div class="bg-white rounded-xl p-3 mt-7">
+      {#each sdohData as { icon, title, goal, link }, i}
+        <Collapse {icon} {title} desc={goal} {link} />
+      {/each}
+    </div>
   </div>
 </section>
 
