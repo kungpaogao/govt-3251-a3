@@ -2,6 +2,14 @@
 
 @tailwind base;
 
+p {
+  @apply mt-5;
+}
+
+a {
+  @apply underline;
+}
+
 @tailwind components;
 
 @tailwind utilities;
