@@ -1,0 +1,1 @@
+There is hope. Numerous projects such the Bronx Greenway have been created in order to improve access to parks and recreation. These are important parts of the lived environment that could influence the health of many residents. Additionally, new supermarkets have been placed in areas such as the South Bronx.

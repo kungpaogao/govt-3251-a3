@@ -2,7 +2,7 @@
 
 @tailwind base;
 
-p {
+.md p {
   @apply mt-5;
 }
 
